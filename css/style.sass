@@ -1,0 +1,281 @@
+$main_color: #262626
+$interactive_element: #cfaa6b
+$input_label_color: #717171
+$error_interactov-hover: #ff2731
+
+body
+    padding: 0px
+    margin: 0px
+    font-family: 'Rubik', sans-serif
+    cursor: default
+header
+    background-color: $interactive_element
+    padding-top: 3vw
+    width: 100%
+    margin-bottom: 4.5vw
+    .logotype_block
+        height: 7vw
+        background-color: $main_color
+        .lotype_svg
+            background-color: $main_color
+            border-radius: 50%
+            display: block
+            z-index: 2
+            position: absolute
+            margin: -1vw 0 0 -5vw
+            left: 50%
+            padding: 1vw
+            svg
+                width: 9vw
+                height: 9vw
+            svg:hover 
+                path
+                    fill: $interactive_element
+    .banner
+        height: 28vw
+        background: url('../images/Rectangle_7.png') no-repeat
+        background-size: 100% auto
+        color: white
+        line-height: 4.5vw
+        font-weight: 400
+        text-align: center
+        display: flex
+        align-items: center
+        span
+            width: 53%
+            min-width: 629px
+            font-size: 3vw
+            text-transform: uppercase
+            display: block
+            margin: 0 auto
+            font-family: "Rubik Mono One"
+            line-height: 65px
+            letter-spacing: -1px
+.main
+    width: 53%
+    min-width: 700px
+    margin: 0 auto
+    text-align: center
+    .сontact_details
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        align-items: flex-end
+        justify-content: center
+        align-content: space-between
+        div
+            min-width: 200px
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 28.8%
+            flex: 0 0 28.8%
+            max-width: 28.8%
+            margin: 0 1.8% 0
+            text-transform: uppercase
+            height: 90px
+        input
+            outline: 0
+            outline-offset: 0
+            width: 100%
+            display: block
+            max-width: 100%
+            padding: 10px 0px
+            margin: 28px 0 0
+            font-size: 14px
+            line-height: 20px
+            text-align: center
+            border: 4px solid $input_label_color
+            text-transform: uppercase
+            color: $main_color
+            letter-spacing: 2.5px
+            font-weight: 400
+            &:hover
+                border: 1px solid $input_label_color !important
+                padding: 13px 3px !important
+                cursor: pointer
+            &:focus
+                border: 1px solid $input_label_color !important
+                padding: 13px 3px !important
+        .error
+            border: 1px solid $error_interactov-hover !important
+            padding: 13px 3px !important
+            &_mess
+                color: $error_interactov-hover
+                font-size: 12px
+                line-height: 30px
+        .done
+            border: 4px solid $interactive_element !important
+        .phone_input
+            label  
+                display: block
+                line-height: 2
+                font-weight: 400
+                font-size: 14px
+                color: $input_label_color
+                letter-spacing: 3.43px
+            input
+                margin: 0
+        input[type="select"]
+            cursor: pointer
+        input[type="submit"]
+            cursor: pointer
+    .differences_question
+        color: $main_color
+        font-family: "Rubik Mono One"
+        font-size: 2vw
+        font-weight: 400
+        line-height: 40px
+        margin: 6vw 0 3.5vw
+    .wraper
+        display: flex
+        flex-wrap: wrap
+        label
+            cursor: pointer
+            font-family: "Rubik Mono One"
+            font-weight: 400
+            font-size: 16px
+            color: $interactive_element
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 20%
+            flex: 0 0 20%
+            max-width: 20%
+            text-align: center
+            margin-bottom: 4.8vw
+            svg
+                width: 40%
+                height: auto
+            &#age
+                padding: 12px 0 0
+            &#color
+                svg
+                    width: 28px
+            span
+                display: block
+                margin-top: 28px
+            &:hover
+                color: $error_interactov-hover
+                svg
+                    path
+                        fill: $error_interactov-hover
+                        stroke: $error_interactov-hover
+
+        input[type="radio"]
+            display: none
+            &:checked
+                + label
+                    color: $error_interactov-hover
+                    svg
+                        path
+                            fill: $error_interactov-hover
+                            stroke: $error_interactov-hover
+        div
+            display: none
+        div.active
+            display: block
+            font-family: Rubik
+            font-size: 14px
+            font-weight: 700
+            line-height: 22px
+            text-transform: uppercase
+            letter-spacing: 1px
+            margin: 0 auto
+            width: 44vw
+            min-width: 627px
+    input[type="submit"]
+        font-size: 16px
+        font-family: "Rubik Mono One"
+        font-weight: 400
+        line-height: 40px
+        text-transform: uppercase
+        background-color: $error_interactov-hover
+        width: 240px
+        height: 60px
+        color: #ffffff
+        border: 0px
+        cursor: pointer
+        margin: 50px 0 50px
+        &:hover
+            background-color: #dc1822
+        &:disabled
+            background-color: #dbdbdb
+            color: $input_label_color
+            cursor: default
+.loaderArea
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0px
+    left: 0px
+    bottom: 0px
+    background: white
+    z-index: 3
+    .wrap
+        margin: -50px 0 0 -150px
+        width: 300px
+        top: 50%
+        position: fixed
+        left: 50%    
+        .loader
+            height: 100px
+            background: url(../images/loading.svg) no-repeat
+            background-size: 300px auto
+            background-position: left
+            animation: shadow  3s ease-in-out
+.hidden
+    display: none
+@keyframes shadow 
+    from
+        width: 0px
+    to
+        width: 300px
+
+@media screen and (max-width: 700px)
+    header
+        padding-top: 20px
+        .logotype_block
+            height: 80px
+            .lotype_svg
+                padding: 10px 15px
+                margin: -10px 0 0 -65px
+                svg
+                    width: 100px
+                    height: 80px
+        .banner
+            height: 177px
+            background-position: center
+            background-size: auto 100%
+            padding: 10px
+            span
+                width: 100%
+                font-size: 18px
+                line-height: 30px
+                min-width: 100%
+    .main
+        width: 90%
+        min-width: 90%
+        padding: 10px
+        .сontact_details
+            display: block
+            flex-wrap: nowrap
+            div
+                display: block
+                margin: 0 auto
+                min-width: 250px
+        .differences_question
+            font-size: 16px
+            margin: 20px 0 40px
+            line-height: 26px
+            padding: 0 20px
+        .wraper
+            display: block
+            label
+                display: inline-block
+                width: 160px
+                margin: 10px
+                flex: none
+                max-width: 160px
+            div
+                width: 100% !important
+                padding: 10px
+                min-width: 100% !important
